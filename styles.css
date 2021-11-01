@@ -1,0 +1,131 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+font-family: 'Lexend Deca', sans-serif;
+color: var(--transparent-white);
+line-height: 1.5;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display';
+text-transform: uppercase;
+color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 300;
+  height: 150px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 850px;
+  margin: 300px auto;
+}
+
+
+.sedans, .suvs, .luxury {
+  height: 380px;
+  padding: 50px;
+}
+
+.sedans {
+  background: var(--bright-orange);
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+}
+
+.suvs {
+background: var(--dark-cyan);
+}
+
+.luxury {
+  background: var(--very-dark-cyan);
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+.icon {
+  position: relative;
+  float: top;
+}
+
+.learn-more-button-sedans,.learn-more-button-suvs, .learn-more-button-luxury {
+  border: none;
+  background: white;
+  border-radius: 50px;
+  padding: 15px;
+  width: 130px;
+}
+
+.button-sedans a {
+  color: var(--bright-orange);
+}
+
+.learn-more-button-sedans:hover {
+  background: var(--bright-orange);
+}
+
+.button-suvs a {
+  color: var(--dark-cyan);
+}
+
+.learn-more-button-suvs:hover {
+  background: var(--dark-cyan);
+}
+
+.button-luxury a {
+  color: var(--very-dark-cyan);
+}
+
+.learn-more-button-luxury:hover {
+  background: var(--very-dark-cyan);
+}
+
+button:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+button:hover a  {
+  color: white;
+}
+
+
+@media screen and (max-width: 750px) {
+  .main-container {
+    display: inline;
+
+  }
+  .sedans {
+    border-radius: 10px 10px 0 0;
+    height: 300px;
+  }
+  .luxury {
+    border-radius: 0 0 10px 10px;
+    height: 300px;
+  }
+
+  .suvs {
+    height: 300px;
+  }
+  p {
+    height: auto;
+  }
+  button {
+    margin-top: 30px;
+  }
+}
